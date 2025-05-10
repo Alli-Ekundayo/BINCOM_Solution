@@ -261,10 +261,8 @@ class BincomPythonTest:
         print(f"5. Probability of randomly selecting RED: {red_probability:.4f} ({self.color_counter.get('RED', 0)} out of {total_colors})")
         
         # 6. Save to PostgreSQL (commented out to avoid connection errors)
-        print("\n6. Database functionality is implemented")
-        print("   Uncomment and provide proper credentials to use this feature")
-        # success = self.save_to_postgresql("your_db", "your_user", "your_password")
-        # print(f"   {'Success!' if success else 'Failed to save to database.'}")
+        success = self.save_to_postgresql("colour", "postgres", "Alliekundayo65")
+        print(f"   {'Success!' if success else 'Failed to save to database.'}")
         
         # 7. Demonstrate recursive search algorithm
         print("\n7. Recursive search algorithm demonstration:")
