@@ -261,6 +261,7 @@ class BincomPythonTest:
         print(f"5. Probability of randomly selecting RED: {red_probability:.4f} ({self.color_counter.get('RED', 0)} out of {total_colors})")
         
         # 6. Save to PostgreSQL (commented out to avoid connection errors)
+        print("\n6. Saving color frequencies to PostgreSQL database...")
         success = self.save_to_postgresql("colour", "postgres", "Alliekundayo65")
         print(f"   {'Success!' if success else 'Failed to save to database.'}")
         
